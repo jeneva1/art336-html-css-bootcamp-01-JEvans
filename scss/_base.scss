@@ -120,7 +120,7 @@ article h1 {
 article div {
     color: $color-title;
     @include fontSize(50px);
-    @include body-font-bold;
+    @include headline-font;
     margin: 30px, 0;
 }
 
