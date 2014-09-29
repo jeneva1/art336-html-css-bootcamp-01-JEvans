@@ -1,0 +1,73 @@
+/* 
+Globals
+	Sass variable, mixins, plugins, etc. that are used throughout the entore site.
+*/
+
+// Function for converting a px based font-size to rem.
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+}
+
+// Mixin that will include the fall back px declaration as well as the calculated rem value.
+@mixin fontSize($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(http://fonts.gstatic.com/s/lato/v10/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(http://fonts.gstatic.com/s/lato/v10/qdgUG4U09HnJwhYI-uK18wLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oswald Regular'), local('Oswald-Regular'), url(http://fonts.gstatic.com/s/oswald/v9/qpy-UiLNKP-VfOdbcs6r6-vvDin1pK8aKteLpeZ5c0A.woff) format('woff');
+}
+@font-face {
+  font-family: 'Pacifico';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Pacifico Regular'), local('Pacifico-Regular'), url(http://fonts.gstatic.com/s/pacifico/v6/yunJt0R8tCvMyj_V4xSjaXYhjbSpvc47ee6xR_80Hnw.woff) format('woff');
+}
+
+
+
+
+@mixin body-font-regular {
+    font-family: 'Lato', georgia, serif;
+    font-style: normal;
+    font-weight: 400; 
+}
+
+@mixin body-font-bold {
+    font-family: 'Lato', georgia, serif;
+    font-style: normal;
+    font-weight: 700;  
+}
+
+@mixin headline-font {
+    font-family: 'Oswald', helvetica, verdana, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@mixin header-font {
+    font-family: 'Pacifico', helvetica, verdana, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+// Site Variables
+$background-color: #e6e3e3;
+$color: #666666;
+$color-title: #ff9966;
