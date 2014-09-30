@@ -86,7 +86,7 @@ a:hover {
 
 
 header h1 {
-    @include fontSize(185px);
+    @include fontSize(195px);
     @include headline-font;
     color: $color;
     line-height: 0;
